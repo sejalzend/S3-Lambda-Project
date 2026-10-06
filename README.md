@@ -55,11 +55,10 @@ An S3 bucket was created to store files and trigger the Lambda function when a n
 
 | Configuration | Value |
 |---|---|
-| Bucket Name | `[ENTER BUCKET NAME]` |
-| Region | `[ENTER AWS REGION]` |
+| Bucket Name | `sejal-s3aws-lambda-project2026 ` |
+| Region | `United States (Oregon)` |
 | Public Access | Blocked |
 | Event Type | Object Created |
-
 
 ![S3 Bucket](images/01_s3_bucket_created.png)
 
@@ -73,14 +72,13 @@ A Lambda function was created using Python to process S3 upload events.
 |---|---|
 | Function Name | `s3-upload-logger` |
 | Runtime | `Python 3.x` |
-| Region | `[ENTER AWS REGION]` |
+| Region | `United States (Oregon)` |
 
 The function receives the S3 event and extracts:
 
 - Bucket name
 - Object name
 - Object size
-
 
 ![Lambda Function](images/02-lambda-function-created.png)
 
@@ -116,9 +114,7 @@ def lambda_handler(event, context):
     }
 ```
 
-
 ![Lambda Function](images/03-lambda-python-code.png)
-
 
 ---
 
@@ -153,9 +149,7 @@ Lambda Processes Event
 CloudWatch Logs
 ```
 
-
 ![S3 Lambda Trigger](images/04-s3-lambda-trigger.png)
-
 
 ---
 
@@ -175,7 +169,6 @@ The upload generated an S3 ObjectCreated event, which automatically invoked the 
 
 ![Uploaded File](images/06-test-file-uploaded.png)
 
-
 ---
 
 # 7. CloudWatch Logs
@@ -191,14 +184,12 @@ Example output:
 ```text
 S3 Upload Event Received
 
-Bucket Name: [bucket-name]
+Bucket Name: sejal-s3aws-lambda-project2026
 Object Name: test.txt
-Object Size: [size] bytes
+Object Size: 38 bytes
 ```
 
-
 ![CloudWatch Logs](images/07-cloudwatch-logs.png)
-
 
 ---
 

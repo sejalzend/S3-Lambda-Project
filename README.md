@@ -1,4 +1,4 @@
-# Project 2 — S3 Event-Driven Lambda
+# Project 2 - S3 Event-Driven Lambda
 
 ## 1. Project Overview
 
